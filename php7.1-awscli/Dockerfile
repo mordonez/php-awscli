@@ -13,3 +13,5 @@ RUN pip install --upgrade pip awsebcli awscli
 
 ENV PATH /root/.composer/vendor/bin:$PATH
 
+# Use the default production configuration
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
